@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Play{% endblock %}
+{% block css_file %}play.css{% endblock %}
+{% block page_google_font %}Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i{% endblock %}
+{% block content %}
+    <section class="skrollable u-align-center u-clearfix u-image u-parallax u-shading u-section-1" id="sec-5848" data-image-width="1280" data-image-height="853" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.85), rgba(0,0,0,0.85)),  url('{{img_src}}');">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-custom-font u-font-montserrat u-text u-text-1">Enter text here.</h1>
+        <img class="u-image u-image-default u-image-1" src="{{ url_for('static', filename=f'images/{img_src}') }}" alt="" data-image-width="1280" data-image-height="853">
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <div class="u-container-style u-group u-opacity u-opacity-60 u-palette-4-dark-1 u-shape-rectangle u-group-1">
+                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                      <a href="https://nicepage.com/k/portfolio-html-templates" class="u-btn u-btn-round u-button-style u-hover-custom-color-9 u-palette-4-dark-1 u-radius-50 u-btn-1">Yes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-3">
+                  <div class="u-container-style u-group u-opacity u-opacity-60 u-palette-2-dark-1 u-group-2">
+                    <div class="u-container-layout u-valign-middle u-container-layout-4">
+                      <a href="https://nicepage.com/k/portfolio-html-templates" class="u-btn u-btn-round u-button-style u-hover-custom-color-10 u-palette-2-dark-1 u-radius-50 u-btn-2">No</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% from "_util.html" import render_field %}
+{% block title %}Sign Up{% endblock %}
+{% block css_file %}signup.css{% endblock %}
+{% block page_google_font %}Ubuntu:300,300i,400,400i,500,500i,700,700i{% endblock %}
+{% block content %}
+    <section class="u-clearfix u-custom-color-7 u-section-1" id="carousel_ae32">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-26 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-custom-color-3 u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <p class="u-text u-text-1">Enter text here.</p>
+                  <div class="u-expanded-width u-form u-form-1">
+                    <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 0px;" source="custom" name="form" redirect="true">
+                      {{ form.hidden_tag() }}
+                      <div class="u-form-group u-form-name u-form-group-1">
+                        {{ render_field(form.username) }}
+                      </div>
+                      <div class="u-form-group u-form-group-2">
+                        {{ render_field(form.password) }}
+                      </div>
+                      <div class="u-form-group u-form-group-3">
+                        {{ render_field(form.confirm) }}
+                      </div>
+                      <div class="u-align-left u-form-group u-form-submit u-form-group-4">
+                        <a href="#" class="u-active-custom-color-5 u-border-2 u-border-active-palette-5-dark-2 u-border-hover-palette-5-dark-2 u-border-palette-5-dark-3 u-btn u-btn-submit u-button-style u-custom-color-4 u-hover-custom-color-5 u-text-active-palette-5-light-3 u-text-hover-palette-5-light-3 u-text-palette-5-light-1 u-btn-1">Sign Up</a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                      </div>
+                      <div class="u-form-send-message u-form-send-success"> Success! You are signed up </div>
+                      <div class="u-form-send-error u-form-send-message"> Unable to sign up </div>
+                      <input type="hidden" value="" name="recaptchaResponse">
+                    </form>
+                  </div>
+                  <p class="u-text u-text-2">Already have an account?&nbsp;<a href="/login" data-page-id="38981855" class="u-active-none u-border-1 u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2">Log In</a>
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-top-lg u-valign-top-xl u-container-layout-2">
+                  <h2 class="u-custom-font u-font-ubuntu u-text u-text-3">We work with ambitious leaders</h2>
+                  <img src="{{ url_for('static', filename='images/fdg-min.jpg') }}" alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="929" data-image-height="1080">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
